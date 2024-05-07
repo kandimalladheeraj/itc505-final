@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lights Out Game</title>
+  <link rel="stylesheet" href="lights_out_styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Lights Out Game</h1>
+    <div class="grid" id="grid">
+      <!-- Grid will be generated dynamically using JavaScript -->
+    </div>
+    <p>Moves: <span id="moveCount">0</span></p>
+    <button id="resetButton">Reset</button>
+<button id="instructionsButton">Instructions</button>
+    <button id="hintButton">Hint</button>
+
+ <div id="hintText"></div>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>You win!</p>
+    </div>
+  </div>
+
+
+  <div id="addendum">
+    <h2>Addendum:</h2>
+    <p>
+      The Lights Out game required numerous important phases to create. I started by concentrating on comprehending the principles and regulations of the game, which enabled me to create the game board using an HTML grid style. The main features of the game were modeled by each square in the grid, which had a light that could be turned on or off. 
+    </p>
+    <p>
+      Implementing the logic to switch nearby squares when a player clicked on a square was one of the biggest obstacles I had to overcome. This meant paying close attention to the grid's design and the relationships between each square and its neighbors. I was able to write a JavaScript code that successfully toggled nearby squares through iterative testing and debugging.
+    </p>
+    <p>
+      I made the decision to include a hint button in order to improve the gameplay. This button gives players useful hints for resolving the puzzle, giving the game a more strategic aspect. In order to make the game more visually appealing and to provide players a more engaging experience, I also added a backdrop image.
+    </p>
+    <p>
+      I gained an understanding of the value of user input and interactivity in game design throughout this project. I was able to enhance the user experience and improve gameplay by iteratively testing the game and getting input from other players. Overall, working on this project has improved my grasp of CSS and JavaScript, and I'm excited to use these newfound abilities in other projects.
+    </p>
+  </div>
+ <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+ <div id="instructionsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Instructions</h2>
+      <p>The Lights Out game is played on a grid of squares, where each square represents a light. The goal of the game is to turn off all the lights.</p>
+      <p>Clicking on a square toggles the state of that square and its adjacent squares (up, down, left, right). If a light is off, clicking on it turns it on, and vice versa.</p>
+      <p>The game starts with a random configuration of on and off lights. To win the game, you need to turn off all the lights in the grid.</p>
+      <p>Use the "Reset" button to start a new game and the "Hint" button to get a helpful hint to solve the puzzle.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
